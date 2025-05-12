@@ -1,5 +1,6 @@
 export const Screens = {
-    login: 'Login'
+    login: 'Login',
+    categories:'Categories'
 }
 
 export const Colors = {

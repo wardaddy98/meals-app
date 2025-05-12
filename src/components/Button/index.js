@@ -1,10 +1,10 @@
 import React from 'react'
 import { Pressable, StyleSheet, Text, View } from 'react-native'
 
-const index = ({ children, style, variant = 'bordered', textStyle }) => {
+const index = ({ children, style, variant = 'bordered', textStyle , onPress}) => {
     return (
         <View style={[styles.common, variant === 'bordered' ? styles.bordered : styles.borderless, style]}>
-            <Pressable android_ripple={{ color: 'grey' }} style={({ pressed }) => pressed && styles.pressed}>
+            <Pressable android_ripple={{ color: 'grey' }} style={({ pressed }) => pressed && styles.pressed} onPress={onPress}>
                 <Text style={[styles.text, textStyle]}>{children}</Text>
             </Pressable>
         </View>

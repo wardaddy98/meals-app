@@ -4,6 +4,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet } from 'react-native';
 import { Colors, Screens } from './src/utilities/constants';
 import Login from './src/screens/Login';
+import Categories from './src/screens/Categories';
 
 
 const Stack = createNativeStackNavigator();
@@ -22,6 +23,7 @@ export default function App() {
           }
         }}>
           <Stack.Screen name={Screens.login} component={Login} options={{ title: 'Welcome!' }} />
+          <Stack.Screen name={Screens.categories} component={Categories} options={{ title: 'Categories' }} />
         </Stack.Navigator>
       </NavigationContainer>
 

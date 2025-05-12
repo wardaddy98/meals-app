@@ -2,9 +2,12 @@ import React from 'react'
 import { KeyboardAvoidingView, SafeAreaView, ScrollView, StyleSheet, TextInput, View } from 'react-native'
 import Button from '../components/Button';
 import commonStyles from '../styles/common';
-import { Colors } from '../utilities/constants';
+import { Colors, Screens } from '../utilities/constants';
 
-const Login = () => {
+const Login = ({ navigation }) => {
+    function handleSignIn() {
+        navigation.navigate(Screens.categories)
+    }
     return (
         <SafeAreaView style={styles.safe_area_view}>
             <ScrollView style={commonStyles.flex1} contentContainerStyle={styles.contentContainerStyle}>
@@ -16,7 +19,7 @@ const Login = () => {
                             <TextInput style={styles.input} placeholder='Email' placeholderTextColor="#000000" />
                             <TextInput style={styles.input} placeholder='Password' placeholderTextColor="#000000" />
                             <Button textStyle={styles.forgotPassButton} variant='borderless'>Forgot Password?</Button>
-                            <Button style={styles.buttonStyles}>Sign In</Button>
+                            <Button onPress={handleSignIn} style={styles.buttonStyles}>Sign In</Button>
                         </View>
                     </View>
                 </KeyboardAvoidingView>
