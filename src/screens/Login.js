@@ -9,24 +9,22 @@ const Login = ({ navigation }) => {
         navigation.navigate(Screens.categories)
     }
     return (
-        <SafeAreaView style={styles.safe_area_view}>
-            <ScrollView style={commonStyles.flex1} contentContainerStyle={styles.contentContainerStyle}>
-                <KeyboardAvoidingView style={[commonStyles.flex1, styles.avoidingView]} behavior='position'>
+        <ScrollView style={commonStyles.flex1} contentContainerStyle={styles.contentContainerStyle}>
+            <KeyboardAvoidingView style={[commonStyles.flex1, styles.avoidingView]} behavior='position'>
 
-                    <View style={styles.container}>
+                <View style={styles.container}>
 
-                        <View style={styles.inputContainer}>
-                            <TextInput style={styles.input} placeholder='Email' placeholderTextColor="#000000" />
-                            <TextInput style={styles.input} placeholder='Password' placeholderTextColor="#000000" />
-                            <Button textStyle={styles.forgotPassButton} variant='borderless'>Forgot Password?</Button>
-                            <Button onPress={handleSignIn} style={styles.buttonStyles}>Sign In</Button>
-                        </View>
+                    <View style={styles.inputContainer}>
+                        <TextInput style={styles.input} placeholder='Email' placeholderTextColor="#000000" />
+                        <TextInput style={styles.input} placeholder='Password' placeholderTextColor="#000000" />
+                        <Button textStyle={styles.forgotPassButto1n} variant='borderless'>Forgot Password?</Button>
+                        <Button onPress={handleSignIn} style={styles.buttonStyles}>Sign In</Button>
                     </View>
-                </KeyboardAvoidingView>
+                </View>
+            </KeyboardAvoidingView>
 
-            </ScrollView>
+        </ScrollView>
 
-        </SafeAreaView>
     )
 };
 

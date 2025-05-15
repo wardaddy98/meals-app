@@ -1,6 +1,8 @@
 export const Screens = {
-    login: 'Login',
-    categories:'Categories'
+    login: 'login',
+    categories:'categories',
+    meals:'meals',
+    mealDetail:'mealDetail'
 }
 
 export const Colors = {
@@ -10,7 +12,7 @@ export const Colors = {
 }
 
 
-export const Categories = [
+export const CATEGORIES = [
     { id: 'c1', title: 'Indian', color: '#FF6F61' },
     { id: 'c2', title: 'Chinese', color: '#FFD166' },
     { id: 'c3', title: 'Italian', color: '#06D6A0' },
@@ -24,261 +26,253 @@ export const Categories = [
 ]
 
 
-export const meals = [
-    {
-        id: 'm1',
-        categoryIds: ['c1'],
-        title: 'Butter Chicken',
-        affordability: 'affordable',
-        complexity: 'medium',
-        imageUrl: 'https://example.com/images/butter_chicken.jpg',
-        duration: 45,
-        ingredients: [
-            '500g chicken',
-            '2 tbsp butter',
-            '1 cup tomato puree',
-            '1/2 cup cream',
-            'Spices'
-        ],
-        steps: [
-            'Marinate chicken with spices.',
-            'Cook chicken until done.',
-            'Prepare tomato-based sauce.',
-            'Combine chicken with sauce and simmer.',
-            'Add cream and cook for 5 minutes.'
-        ],
-        isGlutenFree: true,
-        isVegan: false,
-        isVegetarian: false,
-        isLactoseFree: false
-    },
-    {
-        id: 'm2',
-        categoryIds: ['c2'],
-        title: 'Kung Pao Chicken',
-        affordability: 'affordable',
-        complexity: 'medium',
-        imageUrl: 'https://example.com/images/kung_pao_chicken.jpg',
-        duration: 30,
-        ingredients: [
-            '500g chicken',
-            'Bell peppers',
-            'Peanuts',
-            'Chili peppers',
-            'Soy sauce'
-        ],
-        steps: [
-            'Marinate chicken.',
-            'Stir-fry vegetables and peanuts.',
-            'Add chicken and cook thoroughly.',
-            'Add sauce and simmer for 5 minutes.'
-        ],
-        isGlutenFree: false,
-        isVegan: false,
-        isVegetarian: false,
-        isLactoseFree: true
-    },
-    {
-        id: 'm3',
-        categoryIds: ['c3'],
-        title: 'Margherita Pizza',
-        affordability: 'affordable',
-        complexity: 'simple',
-        imageUrl: 'https://example.com/images/margherita_pizza.jpg',
-        duration: 25,
-        ingredients: [
-            'Pizza dough',
-            'Tomato sauce',
-            'Mozzarella cheese',
-            'Fresh basil'
-        ],
-        steps: [
-            'Preheat oven to 220°C.',
-            'Spread tomato sauce on dough.',
-            'Add mozzarella and basil.',
-            'Bake for 15 minutes.'
-        ],
-        isGlutenFree: false,
-        isVegan: false,
-        isVegetarian: true,
-        isLactoseFree: false
-    },
-    {
-        id: 'm4',
-        categoryIds: ['c4'],
-        title: 'Tacos al Pastor',
-        affordability: 'affordable',
-        complexity: 'medium',
-        imageUrl: 'https://example.com/images/tacos_al_pastor.jpg',
-        duration: 35,
-        ingredients: [
-            '500g pork',
-            'Pineapple',
-            'Corn tortillas',
-            'Onion',
-            'Cilantro'
-        ],
-        steps: [
-            'Marinate pork with spices.',
-            'Grill pork and pineapple.',
-            'Assemble tacos with meat, pineapple, onion, and cilantro.'
-        ],
-        isGlutenFree: true,
-        isVegan: false,
-        isVegetarian: false,
-        isLactoseFree: true
-    },
-    {
-        id: 'm5',
-        categoryIds: ['c5'],
-        title: 'Pad Thai',
-        affordability: 'affordable',
-        complexity: 'medium',
-        imageUrl: 'https://example.com/images/pad_thai.jpg',
-        duration: 30,
-        ingredients: [
-            'Rice noodles',
-            'Shrimp or tofu',
-            'Bean sprouts',
-            'Peanuts',
-            'Pad Thai sauce'
-        ],
-        steps: [
-            'Soak rice noodles.',
-            'Stir-fry protein and vegetables.',
-            'Add noodles and sauce, cook thoroughly.',
-            'Garnish with peanuts.'
-        ],
-        isGlutenFree: true,
-        isVegan: false,
-        isVegetarian: false,
-        isLactoseFree: true
-    },
-    {
-        id: 'm6',
-        categoryIds: ['c6'],
-        title: 'Sushi Rolls',
-        affordability: 'luxurious',
-        complexity: 'hard',
-        imageUrl: 'https://example.com/images/sushi_rolls.jpg',
-        duration: 60,
-        ingredients: [
-            'Sushi rice',
-            'Nori sheets',
-            'Fish or vegetables',
-            'Soy sauce',
-            'Wasabi'
-        ],
-        steps: [
-            'Prepare sushi rice.',
-            'Place nori on mat, add rice and fillings.',
-            'Roll tightly and slice.',
-            'Serve with soy sauce and wasabi.'
-        ],
-        isGlutenFree: false,
-        isVegan: false,
-        isVegetarian: false,
-        isLactoseFree: true
-    },
-    {
-        id: 'm7',
-        categoryIds: ['c7'],
-        title: 'Cheeseburger',
-        affordability: 'affordable',
-        complexity: 'simple',
-        imageUrl: 'https://example.com/images/cheeseburger.jpg',
-        duration: 20,
-        ingredients: [
-            'Beef patty',
-            'Burger bun',
-            'Cheddar cheese',
-            'Lettuce',
-            'Tomato'
-        ],
-        steps: [
-            'Grill beef patty.',
-            'Assemble burger with bun, patty, cheese, and vegetables.',
-            'Serve hot.'
-        ],
-        isGlutenFree: false,
-        isVegan: false,
-        isVegetarian: false,
-        isLactoseFree: false
-    },
-    {
-        id: 'm8',
-        categoryIds: ['c8'],
-        title: 'Coq au Vin',
-        affordability: 'luxurious',
-        complexity: 'hard',
-        imageUrl: 'https://example.com/images/coq_au_vin.jpg',
-        duration: 120,
-        ingredients: [
-            'Chicken',
-            'Red wine',
-            'Mushrooms',
-            'Onions',
-            'Bacon'
-        ],
-        steps: [
-            'Marinate chicken in wine.',
-            'Sear chicken and cook bacon.',
-            'Add vegetables and simmer with wine.',
-            'Cook until chicken is tender.'
-        ],
-        isGlutenFree: true,
-        isVegan: false,
-        isVegetarian: false,
-        isLactoseFree: true
-    },
-    {
-        id: 'm9',
-        categoryIds: ['c9'],
-        title: 'Greek Salad',
-        affordability: 'affordable',
-        complexity: 'simple',
-        imageUrl: 'https://example.com/images/greek_salad.jpg',
-        duration: 15,
-        ingredients: [
-            'Tomatoes',
-            'Cucumber',
-            'Feta cheese',
-            'Olives',
-            'Olive oil'
-        ],
-        steps: [
-            'Chop vegetables.',
-            'Combine in a bowl with feta and olives.',
-            'Drizzle with olive oil and toss.'
-        ],
-        isGlutenFree: true,
-        isVegan: false,
-        isVegetarian: true,
-        isLactoseFree: false
-    },
-    {
-        id: 'm10',
-        categoryIds: ['c10'],
-        title: 'Falafel Wrap',
-        affordability: 'affordable',
-        complexity: 'medium',
-        imageUrl: 'https://example.com/images/falafel_wrap.jpg',
-        duration: 40,
-        ingredients: [
-            'Chickpeas',
-            'Garlic',
-            'Parsley',
-            'Spices',
-            'Pita bread'
-        ],
-        steps: [
-            'Blend chickpeas with herbs and spices.',
-            'Form balls and deep fry.',
-            'Assemble wrap with falafel and vegetables.'
-        ],
-        isGlutenFree: false,
-        isVegan: true,
-        isVegetarian: true,
-        isLactoseFree: true
-    }
-]
+export const MEALS = [
+  // Category c1: Indian
+  {
+    id: 'm1',
+    categoryIds: ['c1'],
+    title: 'Butter Chicken',
+    affordability: 'affordable',
+    complexity: 'medium',
+    imageUrl: 'https://blog.swiggy.com/wp-content/uploads/2024/03/Puri-Aloo-1024x538.png',
+    duration: 45,
+    ingredients: ['500g chicken', '2 tbsp butter', '1 cup tomato puree', '1/2 cup cream', 'Spices'],
+    steps: ['Marinate chicken', 'Cook chicken', 'Make sauce', 'Combine', 'Simmer'],
+    isGlutenFree: true,
+    isVegan: false,
+    isVegetarian: false,
+    isLactoseFree: false,
+    backgroundColor: '#f8b195'
+  },
+  {
+    id: 'm2',
+    categoryIds: ['c1'],
+    title: 'Chole Bhature',
+    affordability: 'affordable',
+    complexity: 'medium',
+    imageUrl: 'https://blog.swiggy.com/wp-content/uploads/2024/03/Puri-Aloo-1024x538.png',
+    duration: 50,
+    ingredients: ['Chickpeas', 'Spices', 'Flour', 'Yogurt', 'Oil'],
+    steps: ['Cook chickpeas', 'Make gravy', 'Knead dough', 'Fry', 'Serve'],
+    isGlutenFree: false,
+    isVegan: false,
+    isVegetarian: true,
+    isLactoseFree: false,
+    backgroundColor: '#f67280'
+  },
+  {
+    id: 'm3',
+    categoryIds: ['c1'],
+    title: 'Palak Paneer',
+    affordability: 'affordable',
+    complexity: 'simple',
+    imageUrl: 'https://blog.swiggy.com/wp-content/uploads/2024/03/Puri-Aloo-1024x538.png',
+    duration: 30,
+    ingredients: ['Spinach', 'Paneer', 'Spices', 'Cream', 'Garlic'],
+    steps: ['Blanch spinach', 'Sauté garlic', 'Add paneer', 'Simmer', 'Serve'],
+    isGlutenFree: true,
+    isVegan: false,
+    isVegetarian: true,
+    isLactoseFree: false,
+    backgroundColor: '#c06c84'
+  },
+  {
+    id: 'm4',
+    categoryIds: ['c1'],
+    title: 'Biryani',
+    affordability: 'pricey',
+    complexity: 'hard',
+    imageUrl: 'https://blog.swiggy.com/wp-content/uploads/2024/03/Puri-Aloo-1024x538.png',
+    duration: 90,
+    ingredients: ['Rice', 'Meat/veg', 'Spices', 'Yogurt', 'Onions'],
+    steps: ['Marinate', 'Cook rice', 'Layer', 'Cook on low', 'Serve'],
+    isGlutenFree: true,
+    isVegan: false,
+    isVegetarian: false,
+    isLactoseFree: false,
+    backgroundColor: '#6c5b7b'
+  },
+  {
+    id: 'm5',
+    categoryIds: ['c1'],
+    title: 'Dosa',
+    affordability: 'affordable',
+    complexity: 'medium',
+    imageUrl: 'https://blog.swiggy.com/wp-content/uploads/2024/03/Puri-Aloo-1024x538.png',
+    duration: 40,
+    ingredients: ['Rice', 'Urad dal', 'Salt', 'Oil', 'Potato filling'],
+    steps: ['Ferment batter', 'Cook dosa', 'Add filling', 'Fold', 'Serve'],
+    isGlutenFree: true,
+    isVegan: true,
+    isVegetarian: true,
+    isLactoseFree: true,
+    backgroundColor: '#355c7d'
+  },
+
+  // Category c2: Chinese
+  {
+    id: 'm6',
+    categoryIds: ['c2'],
+    title: 'Kung Pao Chicken',
+    affordability: 'affordable',
+    complexity: 'medium',
+    imageUrl: 'https://blog.swiggy.com/wp-content/uploads/2024/03/Puri-Aloo-1024x538.png',
+    duration: 30,
+    ingredients: ['Chicken', 'Peanuts', 'Chili', 'Soy sauce', 'Bell peppers'],
+    steps: ['Marinate', 'Stir-fry', 'Add sauce', 'Simmer', 'Serve'],
+    isGlutenFree: false,
+    isVegan: false,
+    isVegetarian: false,
+    isLactoseFree: true,
+    backgroundColor: '#99b898'
+  },
+  {
+    id: 'm7',
+    categoryIds: ['c2'],
+    title: 'Sweet and Sour Pork',
+    affordability: 'affordable',
+    complexity: 'medium',
+    imageUrl: 'https://blog.swiggy.com/wp-content/uploads/2024/03/Puri-Aloo-1024x538.png',
+    duration: 35,
+    ingredients: ['Pork', 'Pineapple', 'Vinegar', 'Sugar', 'Peppers'],
+    steps: ['Fry pork', 'Make sauce', 'Mix and cook', 'Simmer', 'Serve'],
+    isGlutenFree: false,
+    isVegan: false,
+    isVegetarian: false,
+    isLactoseFree: true,
+    backgroundColor: '#feceab'
+  },
+  {
+    id: 'm8',
+    categoryIds: ['c2'],
+    title: 'Fried Rice',
+    affordability: 'affordable',
+    complexity: 'simple',
+    imageUrl: 'https://blog.swiggy.com/wp-content/uploads/2024/03/Puri-Aloo-1024x538.png',
+    duration: 25,
+    ingredients: ['Rice', 'Veggies', 'Eggs', 'Soy sauce', 'Oil'],
+    steps: ['Stir-fry veggies', 'Add rice', 'Add eggs', 'Season', 'Serve'],
+    isGlutenFree: false,
+    isVegan: false,
+    isVegetarian: false,
+    isLactoseFree: true,
+    backgroundColor: '#ff847c'
+  },
+  {
+    id: 'm9',
+    categoryIds: ['c2'],
+    title: 'Spring Rolls',
+    affordability: 'affordable',
+    complexity: 'medium',
+    imageUrl: 'https://blog.swiggy.com/wp-content/uploads/2024/03/Puri-Aloo-1024x538.png',
+    duration: 45,
+    ingredients: ['Wrappers', 'Veggies', 'Oil', 'Soy sauce', 'Spices'],
+    steps: ['Prepare filling', 'Roll', 'Fry', 'Serve'],
+    isGlutenFree: false,
+    isVegan: true,
+    isVegetarian: true,
+    isLactoseFree: true,
+    backgroundColor: '#e84a5f'
+  },
+  {
+    id: 'm10',
+    categoryIds: ['c2'],
+    title: 'Mapo Tofu',
+    affordability: 'affordable',
+    complexity: 'medium',
+    imageUrl: 'https://blog.swiggy.com/wp-content/uploads/2024/03/Puri-Aloo-1024x538.png',
+    duration: 30,
+    ingredients: ['Tofu', 'Pork', 'Bean paste', 'Garlic', 'Onion'],
+    steps: ['Fry pork', 'Add tofu', 'Simmer', 'Serve'],
+    isGlutenFree: false,
+    isVegan: false,
+    isVegetarian: false,
+    isLactoseFree: true,
+    backgroundColor: '#2a363b'
+  },
+
+  // Category c3: Italian
+  {
+    id: 'm11',
+    categoryIds: ['c3'],
+    title: 'Margherita Pizza',
+    affordability: 'pricey',
+    complexity: 'medium',
+    imageUrl: 'https://example.com/images/margherita.jpg',
+    duration: 40,
+    ingredients: ['Pizza dough', 'Tomato sauce', 'Mozzarella', 'Basil'],
+    steps: ['Roll dough', 'Add toppings', 'Bake', 'Serve'],
+    isGlutenFree: false,
+    isVegan: false,
+    isVegetarian: true,
+    isLactoseFree: false,
+    backgroundColor: '#f6cd61'
+  },
+  {
+    id: 'm12',
+    categoryIds: ['c3'],
+    title: 'Spaghetti Carbonara',
+    affordability: 'affordable',
+    complexity: 'medium',
+    imageUrl: 'https://example.com/images/carbonara.jpg',
+    duration: 30,
+    ingredients: ['Spaghetti', 'Eggs', 'Pecorino', 'Pancetta', 'Pepper'],
+    steps: ['Cook pasta', 'Mix sauce', 'Combine', 'Serve'],
+    isGlutenFree: false,
+    isVegan: false,
+    isVegetarian: false,
+    isLactoseFree: false,
+    backgroundColor: '#ff6f69'
+  },
+  {
+    id: 'm13',
+    categoryIds: ['c3'],
+    title: 'Lasagna',
+    affordability: 'pricey',
+    complexity: 'hard',
+    imageUrl: 'https://example.com/images/lasagna.jpg',
+    duration: 90,
+    ingredients: ['Lasagna sheets', 'Meat', 'Tomato sauce', 'Bechamel', 'Cheese'],
+    steps: ['Prepare layers', 'Assemble', 'Bake', 'Serve'],
+    isGlutenFree: false,
+    isVegan: false,
+    isVegetarian: false,
+    isLactoseFree: false,
+    backgroundColor: '#ffcc5c'
+  },
+  {
+    id: 'm14',
+    categoryIds: ['c3'],
+    title: 'Risotto',
+    affordability: 'pricey',
+    complexity: 'medium',
+    imageUrl: 'https://example.com/images/risotto.jpg',
+    duration: 40,
+    ingredients: ['Arborio rice', 'Onion', 'Stock', 'Parmesan'],
+    steps: ['Sauté onion', 'Add rice and stock', 'Stir', 'Add cheese', 'Serve'],
+    isGlutenFree: true,
+    isVegan: false,
+    isVegetarian: true,
+    isLactoseFree: false,
+    backgroundColor: '#88d8b0'
+  },
+  {
+    id: 'm15',
+    categoryIds: ['c3'],
+    title: 'Pesto Pasta',
+    affordability: 'affordable',
+    complexity: 'simple',
+    imageUrl: 'https://example.com/images/pesto_pasta.jpg',
+    duration: 25,
+    ingredients: ['Pasta', 'Pesto sauce', 'Parmesan'],
+    steps: ['Boil pasta', 'Add pesto', 'Mix', 'Serve'],
+    isGlutenFree: false,
+    isVegan: false,
+    isVegetarian: true,
+    isLactoseFree: false,
+    backgroundColor: '#96ceb4'
+  },
+
+
+];
+

@@ -5,7 +5,32 @@
       "import { StyleSheet } from 'react-native';",
       "",
       "const styles = StyleSheet.create({",
+      "main : {",
       "$1",
+      "}",
+      "})"
+    ],
+    "description": "React Native StyleSheet template with import"
+  },
+  "React Native Screen": {
+    "prefix": "rns",
+    "body": [
+      "import { StyleSheet, View } from 'react-native';",
+      "",
+      "const index = () => {",
+      "    return (",
+      "        <View style={styles.main}>",
+      "$1",
+      "        </View>",
+      "    )",
+      "}",
+      "",
+      "export default index",
+      "",
+      "const styles = StyleSheet.create({",
+      "    main: {",
+      "$2",
+      "    }",
       "})"
     ],
     "description": "React Native StyleSheet template with import"
