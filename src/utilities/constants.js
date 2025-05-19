@@ -2,7 +2,10 @@ export const Screens = {
     login: 'login',
     categories:'categories',
     meals:'meals',
-    mealDetail:'mealDetail'
+    mealDetail:'mealDetail',
+    favorites: 'favorites',
+    drawer: 'drawer',
+
 }
 
 export const Colors = {

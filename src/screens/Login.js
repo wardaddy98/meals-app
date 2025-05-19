@@ -6,7 +6,7 @@ import { Colors, Screens } from '../utilities/constants';
 
 const Login = ({ navigation }) => {
     function handleSignIn() {
-        navigation.navigate(Screens.categories)
+        navigation.navigate(Screens.drawer)
     }
     return (
         <ScrollView style={commonStyles.flex1} contentContainerStyle={styles.contentContainerStyle}>
@@ -17,7 +17,7 @@ const Login = ({ navigation }) => {
                     <View style={styles.inputContainer}>
                         <TextInput style={styles.input} placeholder='Email' placeholderTextColor="#000000" />
                         <TextInput style={styles.input} placeholder='Password' placeholderTextColor="#000000" />
-                        <Button textStyle={styles.forgotPassButto1n} variant='borderless'>Forgot Password?</Button>
+                        <Button textStyle={styles.forgotPassButton} variant='borderless'>Forgot Password?</Button>
                         <Button onPress={handleSignIn} style={styles.buttonStyles}>Sign In</Button>
                     </View>
                 </View>
